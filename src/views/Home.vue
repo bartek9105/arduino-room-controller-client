@@ -1,20 +1,13 @@
 <template>
-  <div>
-    <AppButton text="Change color" />
-  </div>
+  <div></div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import axios from 'axios'
 
-import AppButton from '@/components/AppButton.vue'
-
 export default defineComponent({
   name: 'Home',
-  components: {
-    AppButton
-  },
   setup() {
     const color = ref<string>('')
 
