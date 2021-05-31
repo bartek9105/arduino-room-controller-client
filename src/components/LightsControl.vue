@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex items-center mb-4">
-      <h2 class="mr-16">Lights control</h2>
+      <h2 class="text-lg font-bold text-gray-500 mr-16">Lights control</h2>
       <div class="flex items-center">
         <span class="text-gray-500 mr-2">Lights on</span>
         <ToggleSwitch />
