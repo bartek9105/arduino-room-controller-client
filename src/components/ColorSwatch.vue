@@ -4,6 +4,7 @@
       <div
         :style="{ backgroundColor: color }"
         class="mr-2 w-16 h-8 rounded-md cursor-pointer"
+        @click="pickColor(color)"
       ></div>
     </div>
   </div>
@@ -23,7 +24,12 @@ export default defineComponent({
       '#8B5CF6',
       '#EC4899'
     ])
-    return { colors }
+
+    const pickedColor = ref<string>('')
+    const pickColor = (color: string) => {
+      pickedColor.value = color
+    }
+    return { colors, pickedColor, pickColor }
   }
 })
 </script>
