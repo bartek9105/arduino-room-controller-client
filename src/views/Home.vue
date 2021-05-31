@@ -1,5 +1,7 @@
 <template>
-  <AppButton text="Change color" />
+  <div>
+    <AppButton text="Change color" />
+  </div>
 </template>
 
 <script lang="ts">
