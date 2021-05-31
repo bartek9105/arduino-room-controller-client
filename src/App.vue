@@ -1,7 +1,9 @@
 <template>
   <div class="flex">
-    <AppSideNavbar />
-    <router-view class="flex-1" />
+    <AppSideNavbar class="w-1/6" />
+    <div class="mx-auto py-16">
+      <router-view class="max-w-screen-xl" />
+    </div>
   </div>
 </template>
 

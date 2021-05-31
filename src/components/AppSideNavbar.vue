@@ -1,6 +1,6 @@
 <template>
   <div
-    class="shadow-xl py-12 h-100 w-1/6 bg-white text-blue-500 font-bold cursor-pointer"
+    class="shadow-xl py-12 h-100 bg-white text-blue-500 font-bold cursor-pointer"
   >
     <nav>
       <ul>

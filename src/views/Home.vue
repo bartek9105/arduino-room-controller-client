@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/4 mx-auto">
+  <div>
     <RoomTilesInfo class="mb-8" />
     <RoomTilesInfo class="mb-8" />
     <RoomTilesInfo />
