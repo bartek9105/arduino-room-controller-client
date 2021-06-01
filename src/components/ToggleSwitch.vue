@@ -1,15 +1,22 @@
 <template>
   <label class="switch">
-    <input type="checkbox" />
+    <input type="checkbox" v-model="toggle" />
     <span class="slider round"></span>
   </label>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref, watch } from 'vue'
 
 export default defineComponent({
-  name: 'ToggleSwitch'
+  name: 'ToggleSwitch',
+  setup(_, { emit }) {
+    const toggle = ref<boolean>(false)
+    watch(toggle, (toggle, prevToggle) => {
+      emit('toggle', toggle)
+    })
+    return { toggle }
+  }
 })
 </script>
 

@@ -4,7 +4,7 @@
       <h2 class="text-lg font-bold text-gray-500 mr-16">Lights control</h2>
       <div class="flex items-center">
         <span class="text-gray-500 mr-2">Lights on</span>
-        <ToggleSwitch />
+        <ToggleSwitch @toggle="emitedToggleStatus" />
       </div>
     </div>
     <ColorSwatch @color="emitedColor" />
@@ -29,13 +29,19 @@ export default defineComponent({
       await changeLedColor(pickedColor)
     }
 
+    const emitedToggleStatus = async (toggle: boolean) => {
+      await axios.post('http://localhost:3000/led/status', {
+        status: toggle
+      })
+    }
+
     const changeLedColor = async (color: string) => {
-      await axios.post('http://localhost:3000', {
+      await axios.post('http://localhost:3000/led', {
         color
       })
     }
 
-    return { emitedColor, changeLedColor }
+    return { emitedColor, changeLedColor, emitedToggleStatus }
   }
 })
 </script>
