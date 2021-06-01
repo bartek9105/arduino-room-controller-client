@@ -1,4 +1,6 @@
 <template>
+  <span class="text-gray-500 mr-2" v-if="toggle">Lights on</span>
+  <span class="text-gray-500 mr-2" v-else>Lights off</span>
   <label class="switch">
     <input type="checkbox" v-model="toggle" />
     <span class="slider round"></span>

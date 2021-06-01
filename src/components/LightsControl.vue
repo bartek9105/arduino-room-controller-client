@@ -1,9 +1,8 @@
 <template>
   <div>
-    <div class="flex items-center mb-4">
+    <div class="flex items-center mb-4 justify-between">
       <h2 class="text-lg font-bold text-gray-500 mr-16">Lights control</h2>
       <div class="flex items-center">
-        <span class="text-gray-500 mr-2">Lights on</span>
         <ToggleSwitch @toggle="emitedToggleStatus" />
       </div>
     </div>
