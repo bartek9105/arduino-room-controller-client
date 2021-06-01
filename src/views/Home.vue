@@ -1,22 +1,13 @@
 <template>
-  <div>
-    <RoomTilesInfo class="mb-8" />
-    <RoomTilesInfo class="mb-8" />
-    <RoomTilesInfo />
-  </div>
+  <div></div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import axios from 'axios'
 
-import RoomTilesInfo from '@/components/RoomTilesInfo.vue'
-
 export default defineComponent({
   name: 'Home',
-  components: {
-    RoomTilesInfo
-  },
   setup() {
     const color = ref<string>('')
 
