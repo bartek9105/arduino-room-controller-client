@@ -2,10 +2,10 @@
   <div>
     <h2 class="text-lg font-bold text-gray-500 mb-4">{{ title }}</h2>
     <apexchart
-      width="800"
       type="area"
       :options="chartOptions"
       :series="series"
+      height="300"
     ></apexchart>
   </div>
 </template>

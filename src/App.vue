@@ -1,19 +1,17 @@
 <template>
-  <div class="flex">
-    <AppSideNavbar class="w-1/6" />
-    <div class="mx-auto py-16">
-      <router-view class="max-w-screen-xl" />
-    </div>
+  <AppNavbar />
+  <div class="w-9/12 mx-auto px-8 py-16">
+    <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import AppSideNavbar from '@/components/AppSideNavbar.vue'
+import AppNavbar from '@/components/AppNavbar.vue'
 
 export default defineComponent({
   components: {
-    AppSideNavbar
+    AppNavbar
   }
 })
 </script>

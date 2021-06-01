@@ -1,11 +1,15 @@
 <template>
   <div>
-    <h2 class="text-lg font-bold text-gray-500 mb-4">Room name</h2>
-    <div class="flex justify-between">
-      <RoomTileInfo class="mb-16" name="Temperature" :data="data.temperature">
+    <h2 class="text-lg font-bold text-gray-500 mb-4">Room</h2>
+    <div class="flex justify-between flex-wrap">
+      <RoomTileInfo
+        class="mb-16 mr-4"
+        name="Temperature"
+        :data="data.temperature"
+      >
         <font-awesome-icon icon="temperature-high" />
       </RoomTileInfo>
-      <RoomTileInfo class="mb-16" name="Humidity" :data="data.humidity">
+      <RoomTileInfo class="mb-16 mr-4" name="Humidity" :data="data.humidity">
         <font-awesome-icon icon="tint" />
       </RoomTileInfo>
       <RoomTileInfo class="mb-16" name="Motion sensor" data="No one inside">
