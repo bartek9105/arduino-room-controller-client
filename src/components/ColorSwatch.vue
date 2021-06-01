@@ -3,9 +3,15 @@
     <div v-for="(color, index) in colors" :key="index">
       <div
         :style="{ backgroundColor: color }"
-        class="mr-2 w-16 h-8 rounded-md cursor-pointer"
+        class="mr-2 w-16 h-8 rounded-md cursor-pointer flex items-center justify-center"
         @click="pickColor(color)"
-      ></div>
+      >
+        <font-awesome-icon
+          :icon="['fas', 'check-circle']"
+          class="text-white"
+          v-if="color === pickedColor"
+        />
+      </div>
     </div>
   </div>
 </template>
