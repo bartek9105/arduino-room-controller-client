@@ -1,13 +1,22 @@
 <template>
   <div>
     <h2 class="text-lg font-bold text-gray-500 mb-4">Room name</h2>
-    <div class="flex">
-      <RoomTileInfo class="mb-16" name="Temperature" :data="data.temperature" />
-      <RoomTileInfo class="mb-16" name="Humidity" :data="data.humidity" />
+    <div class="flex justify-between">
+      <RoomTileInfo class="mb-16" name="Temperature" :data="data.temperature">
+        <font-awesome-icon icon="temperature-high" />
+      </RoomTileInfo>
+      <RoomTileInfo class="mb-16" name="Humidity" :data="data.humidity">
+        <font-awesome-icon icon="tint" />
+      </RoomTileInfo>
+      <RoomTileInfo class="mb-16" name="Motion sensor" data="No one inside">
+        <font-awesome-icon icon="user-friends" />
+      </RoomTileInfo>
     </div>
     <LightsControl class="mb-16" />
+
     <AppChart title="Temperature" class="mb-8" />
     <AppChart title="Humidity" />
+
     <LogsTable title="Logs" />
   </div>
 </template>
