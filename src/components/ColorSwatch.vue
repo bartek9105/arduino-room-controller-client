@@ -15,7 +15,7 @@ import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'ColorSwatch',
-  setup() {
+  setup(_, { emit }) {
     const colors = ref<string[]>([
       '#EF4444',
       '#F59E0B',
@@ -28,6 +28,7 @@ export default defineComponent({
     const pickedColor = ref<string>('')
     const pickColor = (color: string) => {
       pickedColor.value = color
+      emit('color', pickedColor.value)
     }
     return { colors, pickedColor, pickColor }
   }

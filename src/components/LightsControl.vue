@@ -7,12 +7,14 @@
         <ToggleSwitch />
       </div>
     </div>
-    <ColorSwatch />
+    <ColorSwatch @color="emitedColor" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import axios from 'axios'
+
 import ToggleSwitch from '@/components/ToggleSwitch.vue'
 import ColorSwatch from '@/components/ColorSwatch.vue'
 
@@ -21,6 +23,19 @@ export default defineComponent({
   components: {
     ToggleSwitch,
     ColorSwatch
+  },
+  setup() {
+    const emitedColor = async (pickedColor: string) => {
+      await changeLedColor(pickedColor)
+    }
+
+    const changeLedColor = async (color: string) => {
+      await axios.post('http://localhost:3000', {
+        color
+      })
+    }
+
+    return { emitedColor, changeLedColor }
   }
 })
 </script>
