@@ -21,31 +21,28 @@ export default defineComponent({
   props: {
     title: {
       type: String
+    },
+    data: {
+      type: Array
+    },
+    dates: {
+      type: Array
     }
   },
-  data: function() {
+  data() {
     return {
       chartOptions: {
         chart: {
           id: 'vuechart-example'
         },
         xaxis: {
-          categories: [
-            '06:00',
-            '07:00',
-            '08:00',
-            '09:00',
-            '10:00',
-            '11:00',
-            '12:00',
-            '13:00'
-          ]
+          categories: this.dates
         }
       },
       series: [
         {
-          name: 'Temperature',
-          data: [23, 22, 21, 22, 25, 24, 21, 18]
+          name: this.title,
+          data: this.data
         }
       ]
     }
